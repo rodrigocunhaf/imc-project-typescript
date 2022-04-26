@@ -1,0 +1,75 @@
+* {
+    margin:0;
+    padding: 0;
+    color:#E57F84;
+
+}
+
+body {
+    background-color: #2F5061;
+
+}
+
+.pallets{
+    color:#E57F84;
+    color:#2F5061;
+    color:#4297A0;
+    color:#F4EAE6;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F4EAE6;
+    margin-top: 40px;
+    max-width: 70%;
+    margin: 2rem auto;
+    padding: 64px;
+    box-shadow: 0 0 3px 2px #4297A0;
+    border-radius: 7px;
+}
+
+form label {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+form input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 1.8rem;
+    color: #2F5061;
+    padding: 5px;
+    margin:5px 0 10px 0;
+    font-size: 1.1rem;
+}
+
+form input:focus{
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 2px 1px #2F5061;
+}
+
+.patient-form , .medical-form{
+    width: 45%;
+}
+
+form button {
+    display: block;
+    padding: 10px;
+    margin: 40px auto 0 auto;
+    width: 60%;
+    height: 60px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border:0;
+    background-color: #E57F84;
+    color: #2F5061;
+    border-radius: 8px;
+    transition-duration: 120ms;
+}
+
+form button:hover{
+    box-shadow: 0 0 3px 1px #2F5061;
+}
