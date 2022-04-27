@@ -73,3 +73,74 @@ form button {
 form button:hover{
     box-shadow: 0 0 3px 1px #2F5061;
 }
+
+.patient-list{
+    background-color: white;
+    max-width: 70%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 64px;
+    border-radius: 7px;
+    box-shadow: 0 0 3px 2px #4297A0;
+}
+
+.patient-list li {
+    background-color: #4297A0;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0 0 3px 2px #4297A0;
+    margin-top: 12px;
+
+}
+
+.patient-list h1 {
+    text-align: center;
+    margin-bottom: 50px;
+   
+}
+
+
+.patient-list h2{
+    text-align: center;
+    color: #2F5061;
+}
+
+.info-token {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.info-token__patient, .info-token__doctor {
+    background-color: #2F5061;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 3px 2px #4297A0;
+    justify-content: center;
+}
+
+.info-token__title{
+    text-align: center;
+    background-color: #F4EAE6;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #2F5061;
+}
+
+.info-token__data{
+    background-color: #F4EAE6;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 70px;
+    text-align: center;
+}
+
+.info-token__patient b , .info-token__doctor b{
+    color: #2F5061;
+    margin-right: 10px;
+}

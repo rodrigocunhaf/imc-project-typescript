@@ -1,5 +1,6 @@
-import { Nutritionist } from "./models/nutritionist";
+import { Form } from "./components/Form";
+import { Patient } from "./models/patient";
 
-const n1 = new Nutritionist('1','123',Math.random().toString());
+const patientList: Patient[] = [];
 
-console.log(n1);
+const form = new Form(patientList);

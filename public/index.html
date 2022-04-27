@@ -11,33 +11,51 @@
 <body>
     <form>
         <div class='patient-form'> 
-            <label>Document Nº<input type='text'/></label>
-            <label>Name<input type='text'/></label>
-            <label>Height<input type='text'/></label>
-            <label>Weight<input type='text'/></label>
+            <label>Document Nº<input type='text' id="patient-document"/></label>
+            <label>Name<input type='text' id="patient-name"/></label>
+            <label>Height<input type='text' id="patient-height"/></label>
+            <label>Weight<input type='text' id="patient-weight"/></label>
         </div>
         <div class='medical-form'>
-            <label>Doctor name<input type='text'/></label>
-            <label>Doctor cpf<input type='text'/></label>
-            <label>Medical document Nº<input type='text'/></label>
+            <label>Doctor name<input type='text' id="doctor-name"/></label>
+            <label>Doctor cpf<input type='text' id="doctor-document"/></label>
+            <label>Medical document Nº<input type='text' id='doctor-medical'"/></label>
             <button type="submit">Register</button>
         </div>
     </form>
 
-    <ul>
-        <h1>Patient list</h1>
+    <ul class="patient-list" >
+        <h1>Document</h1>
         <li>
-            <h2>Rodrigo's medical record</h2>
-            <div>
-                <h3>Assessment</h3>
-                <p><b>Document Nº:</b>123.456.789-57</p>
-                <p><b>I.M.C:</b>932.0</p>
-                <p><b>Status:</b>Obesity</p>
+            <div class="info-token">
+                <div class="info-token__patient">
+                    <h3 class="info-token__title">Assessment</h3>
+                    <p class="info-token__data"><b>Document Nº:</b>123.456.789-57</p>
+                    <p class="info-token__data"><b>I.M.C:</b>932.0</p>
+                    <p class="info-token__data"><b>Status:</b>Obesity</p>
+                </div>
+                <div class="info-token__doctor" >
+                    <h3 class="info-token__title" >Evaluator doctor</h3>
+                    <p class="info-token__data" ><b>Medical Document Nº:</b>123.456.789-57</p>
+                    <p class="info-token__data"><b>Name</b>Francisco franciscano teste</p>
+                    <p class="info-token__data"><b>CPF:</b>123.456.789-57</p>
+                </div>
             </div>
-            <div>
-                <h3>Evaluator doctor</h3>
-                <p><b>Medical Document Nº:</b>123.456.789-57</p>
-                <p><b>Name</b>Francisco franciscano teste</p>
+        </li>
+        <li>
+            <div class="info-token">
+                <div class="info-token__patient">
+                    <h3 class="info-token__title">Assessment</h3>
+                    <p class="info-token__data"><b>Document Nº:</b>123.456.789-57</p>
+                    <p class="info-token__data"><b>I.M.C:</b>932.0</p>
+                    <p class="info-token__data"><b>Status:</b>Obesity</p>
+                </div>
+                <div class="info-token__doctor" >
+                    <h3 class="info-token__title" >Evaluator doctor</h3>
+                    <p class="info-token__data" ><b>Medical Document Nº:</b>123.456.789-57</p>
+                    <p class="info-token__data"><b>Name</b>Francisco franciscano teste</p>
+                    <p class="info-token__data"><b>CPF:</b>123.456.789-57</p>
+                </div>
             </div>
         </li>
     </ul>

@@ -3,12 +3,13 @@ const path = require('path');
 module.exports = {
   mode:'development',
   entry: './src/app.ts',
+  stats:'errors-only',
   module: {
     rules: [
       {
         test: /\.ts?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: '/node_modules/',
       },
     ],
   },
@@ -20,16 +21,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devServer:{
-    static:[
-        {
-          directory:path.join(__dirname,'public'),
-        },
-        {
-          directory:path.join(__dirname,'dist')
-        }
-    ],
     client:{
-        logging:'warn'
+      logging:'none',
+      progress:true
     }
   }
 };
