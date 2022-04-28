@@ -1,4 +1,4 @@
-import { INutritionist } from "../interfaces/nutrionist";
+import { INutritionist } from "../interfaces/Inutrionist";
 import { Person } from "./people";
 
 class Nutritionist extends Person implements INutritionist{
@@ -16,7 +16,7 @@ class Nutritionist extends Person implements INutritionist{
     };
 
     get Name():string {
-        return this.cpf;
+        return this.name;
     };
 
     get MedicalDocument(): string {

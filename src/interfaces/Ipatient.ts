@@ -17,6 +17,8 @@ interface IPatient {
     get Height ():number;
 
     get Weight():number;
+
+    configPatient():void;
 };
 
 

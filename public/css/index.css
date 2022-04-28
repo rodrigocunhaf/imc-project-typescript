@@ -138,9 +138,36 @@ form button:hover{
     padding: 5px;
     border-radius: 70px;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .info-token__patient b , .info-token__doctor b{
     color: #2F5061;
     margin-right: 10px;
 }
+
+#under{
+    color: red;
+    text-shadow: 0 0 1px black, 0 0 5px #0000FF;
+}
+
+#severy{
+    color:red;
+    text-shadow: 0 0 1px black, 0 0 5px #0000FF;
+}
+
+#normal{
+    color:green;
+    text-shadow: 0 0 1px black, 0 0 5px #0000FF;
+}
+
+#overweight{
+    color:rgb(255, 217, 0);
+    text-shadow: 0 0 1px black, 0 0 5px #0000FF;
+}
+
+#obesity{
+    color:orange;
+    text-shadow: 0 0 1px black, 0 0 5px #0000FF;
+}   

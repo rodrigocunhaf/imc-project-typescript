@@ -1,6 +1,3 @@
-import { Form } from "./components/Form";
-import { Patient } from "./models/patient";
+import { Form } from "./components/forms";
 
-const patientList: Patient[] = [];
-
-const form = new Form(patientList);
+const form = new Form();

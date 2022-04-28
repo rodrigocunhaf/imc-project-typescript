@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   mode:'development',
   entry: './src/app.ts',
-  stats:'errors-only',
+  stats:'none',
   module: {
     rules: [
       {
