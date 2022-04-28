@@ -8,6 +8,7 @@ import { DocumentList} from '../models/document-list'
 import { DocumentAvaliationType } from "../custom-types/document-type";
 import { FormInputs , InputTypeForm} from "../custom-types/input-type";
 import { generateDocument } from "../utils/document-generator";
+import { validation } from "../utils/validation-form";
 
 
 @ConfigureComponent
@@ -38,16 +39,25 @@ class Form extends Component <HTMLFormElement> implements IForm <SubmitEvent> {
             medicalDocument:this.inputs.inputMedicalDocument.value
         };
 
-        const patient = new Patient(patientCpf,patientName,+weight,+height,this.documentList.getId().toString());
-        const nutritionist = new Nutritionist(doctorCpf,doctorName,medicalDocument);
+        const isValid = validation(weight , height , patientCpf, patientName , doctorCpf , doctorName , medicalDocument)!; 
 
-        const documentAvaliation: DocumentAvaliationType = { patient, nutritionist };
+        if ( isValid.length === 0 ){
+            const patient = new Patient(patientCpf,patientName,+weight,+height,this.documentList.getId().toString());
+            const nutritionist = new Nutritionist(doctorCpf,doctorName,medicalDocument);
 
-        generateDocument(documentAvaliation);
+            const documentAvaliation: DocumentAvaliationType = { patient, nutritionist };
 
-        this.documentList.addPatientOnList(documentAvaliation);
+            generateDocument(documentAvaliation);
+
+            this.documentList.addPatientOnList(documentAvaliation);
+            
+            FormInputs.clearInputs();
+            return;
+        };
+
+        console.log(isValid)
+        alert(isValid);
         
-        console.log(documentAvaliation);
     };
 };
 

@@ -6,7 +6,10 @@ type InputTypeForm = {
     inputDoctorCPF:HTMLInputElement;
     inputMedicalDocument:HTMLInputElement;
     inputDoctorName:HTMLInputElement;
+
+    clearInputs:Function
 };
+
 
 const FormInputs: InputTypeForm = {
 
@@ -17,6 +20,13 @@ const FormInputs: InputTypeForm = {
     inputDoctorCPF:document.getElementById('doctor-document')! as HTMLInputElement,
     inputMedicalDocument:document.getElementById('doctor-medical')! as HTMLInputElement,
     inputDoctorName:document.getElementById('doctor-name')! as HTMLInputElement,
+ 
+    clearInputs: () => {
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach ( item =>{
+            item.value = '';
+        });
+    }
 };
 
 export { FormInputs , InputTypeForm };
